@@ -1,0 +1,30 @@
+html
+  body
+      .container.gutter-top
+        .row
+          .content
+            #msgdiv.form-group
+              #errname.errdiv Survey Name
+              input#txtmail.form-control(type='text', placeholder='Give a name to your survey', ng-model='form.name', style='width:100% !important')
+              br
+              br
+              button.btn.btn-default(ng-disabled='!form.name', ng-click='addques()')
+                span.glyphicon.glyphicon-plus
+                |  Add Question
+              br
+              br
+              div(ng-repeat='question in form.questions')
+                span
+                  | Question {{form.questions.indexOf(question)+1}}
+                  input.form-control(type='text', placeholder='Type your question here', ng-model='question.questions_value', value='{{question.questions_value}}')
+                  button.btn.btn-default(ng-click='remove(question.questions_id)') Remove Question
+                  button.btn.btn-default(ng-disabled='!question.questions_value', ng-click='addoption(question)') Add Options
+                  div(ng-repeat='option in question.options')
+                    span
+                      | Option {{question.options.indexOf(option)+1}}
+                      input.form-control(type='text', placeholder='Type your option here', ng-model='option.options_value', value='{{option.options_value}}')
+                      button.btn.btn-default(ng-click='removeop(question.questions_id,option.options_id)') Remove Option
+              button#btnsend.btn.btn-default(ng-disabled='!form.name', stylex='background-color:rgba(0, 0, 0, 0.6); color: #FFF; border:none', ng-click='save()') Save
+              pre.
+                {{form|json}}                
+            #alertdiv(style='display:none; background-color:rgba(255, 167, 0, 0.7); padding: 15px; text-align:center; border: 1px solid #000')

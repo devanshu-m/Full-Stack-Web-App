@@ -1,0 +1,12 @@
+h1(align='center')  {{survey.name}} 
+.container
+  .panel.panel-default
+    .panel-body
+      form
+        .form-group(ng-repeat='question in survey.questions')
+          label(for='{{question.questions_id}}') {{question.questions_id}}. {{question.questions_value}}
+          .radio(ng-repeat='option in question.options')
+            label
+              input(type='radio', name='optradio{{question.questions_id}}')
+              |  {{option.options_value}}
+        button.btn.btn-default(ng-click='home()') Back

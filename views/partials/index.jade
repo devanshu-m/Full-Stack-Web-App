@@ -1,0 +1,12 @@
+.container.gutter-top
+  .row
+    .content
+      h3 You have <b>{{number}}</b> surveys!
+      h3 Survey with maximum questions is survey <b>{{name}}</b> with number of questions = <b>{{number1}}</b> !
+      div(ng-repeat='survey in surveys')
+        h3 {{survey.name}}
+        a(href='/readPost/{{survey._id}}') Preview
+        |  - 
+        a(href='/editPost/{{survey._id}}') Edit
+        |  - 
+        a(href='/deletePost/{{survey._id}}') Delete

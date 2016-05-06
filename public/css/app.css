@@ -1,0 +1,229 @@
+/* app css stylesheet */
+
+/*.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}*/
+
+
+/*change bootstrap gutter http://stackoverflow.com/questions/19164377/reduce-the-gutter-default-30px-on-smaller-devices-in-bootstrap3*/
+div[class^="col"]{padding-left:5px; padding-right:5px;}
+
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'OpenSansCondLight';
+  src: url('../bower_components/open-sans-cond/opensans-condlight.ttf');
+}
+
+@font-face {
+ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+@font-face {
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+*{font-family: Helvetica Neue; text-decoration: none !important}
+
+.opensanscondlight{
+  font-family:OpenSansCondLight;
+}
+
+body {
+  
+  margin:0;
+  background: #efefef !important;
+  line-height: 1.42857;
+  color: #333333;
+  background-color: #fff; 
+}
+
+a{text-decoration:none;}
+*:focus {
+    outline: none !important;
+}
+
+button.button1, button.button1:hover, button.button1.active, button.button1.activated{
+  text-transform: uppercase;
+  background-color: #4099FF;
+  color: #ffffff;
+  font-size:130%;
+  text-decoration: none;
+}
+button.button2, button.button2:hover, button.button2.active, button.button2.activated{
+  text-transform: uppercase;
+  background-color: #999;
+  color: #ffffff;
+  font-size:130%;
+  text-decoration: none;
+}
+
+
+.warning{
+   color: #f1453f !important;
+ }
+
+.card {
+  display: block;
+  margin: 0;
+  position: relative;
+  background: #d5d5d5;
+  overflow: hidden;
+  background: white;
+  user-select: none; }
+.card .content {
+  padding: 20px;
+  font-size: 11pt; }
+.card .content h3 {
+  margin: 5px 0; }
+.card:afterxx {
+  position: absolute;
+  font-size: .9rem;
+  top: 1.5rem;
+  right: 1rem;
+  content: "i";
+  border: thin solid gray;
+  color: gray;
+  width: 1.1rem;
+  line-height: 1rem;
+  text-align: center;
+  border-radius: 50%;
+  pointer-events: none; }
+
+/*
+google colors
+green #008744 (0,135,68)
+blue #0057e7 (0,87,231)
+red #d62d20 (214,45,32)
+yellow #ffa700 (255,167,0)
+*/
+
+
+.background-white {
+  background: white; }
+
+.margin10 {
+  margin: 10px; }
+
+.cursor-pointer {
+  cursor: pointer; }
+
+.navbar {
+  margin-bottom: 0px;
+  border: 0px solid transparent; }
+
+.gutter-top {
+  margin-top: 10px; }
+
+.gutter-bottom {
+  margin-bottom: 10px; }
+
+@media (min-width: 992px) {
+  .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top; }
+
+  .navbar .navbar-collapse {
+    text-align: center; } }
+.inverse-dropdown {
+  background-color: #222;
+  border-color: #080808; }
+.inverse-dropdown > li > a {
+  color: #999; }
+.inverse-dropdown > li > a:hover {
+  color: #fff;
+  background-color: #000; }
+.inverse-dropdown > .divider {
+  background-color: #000; }
+
+.row {
+  margin: 0;
+  padding: 0; }
+
+
+
+section.video {
+  margin: 0;
+  background: white;
+  position: relative; }
+
+
+section.blueblock {
+  margin: 10px 0;
+  color: #ffffff;
+  background: rgba(0, 87, 231, 0.7);
+  padding: 20px; }
+section.blueblock h1 {
+  padding: 0;
+  margin: 0; }
+
+section.greenblock {
+  margin: 10px 0;
+  color: #ffffff;
+  background: rgba(0, 135, 68, 0.7);
+  padding: 20px; }
+section.greenblock h1 {
+  padding: 0;
+  margin: 0; }
+
+section.redblock {
+  margin: 10px 0;
+  color: #ffffff;
+  background: rgba(214, 45, 32, 0.7);
+  padding: 20px; }
+section.redblock h1 {
+  padding: 0;
+  margin: 0; }
+
+section.yellowblock {
+  margin: 10px 0;
+  color: #ffffff;
+  background: rgba(255, 167, 0, 0.7);
+  padding: 20px; }
+section.yellowblock h1 {
+  padding: 0;
+  margin: 0; }
+
+.avatar {
+
+    margin-top: 1em;
+    margin-right: 1em;
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+    -webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #eee, 0 2px 5px 4px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #eee, 0 2px 5px 4px rgba(0,0,0,.2);
+    box-shadow: 0 0 0 3px #fff, 0 0 0 4px #eee, 0 2px 5px 4px rgba(0,0,0,.2);
+}
+
+/*jqueryui hacks*/
+.ui-dialog.ui-resizable-disabled .ui-resizable-handle { display: none; }
+
+.errdiv {font-weight: normal; margin-bottom: 4px}

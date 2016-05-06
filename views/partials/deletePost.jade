@@ -1,0 +1,7 @@
+//h2 {{survey.name}}
+//div {{survey.name}}
+p
+  | Are you sure you want to delete <b>{{survey.name}}</b>? 
+  button.btn.btn-default(ng-click='deletePost(survey._id)') Yes
+  |  - 
+  button.btn.btn-default(ng-click='home()') No thanks
